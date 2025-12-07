@@ -11,11 +11,11 @@ export function Hero() {
   return (
     <section className="relative min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden py-12 sm:py-16 md:py-0">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-radial from-primary/5 dark:from-primary/10 via-transparent to-transparent" />
       
-      {/* Animated orbs - smaller on mobile */}
-      <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/10 rounded-full blur-3xl animate-float animation-delay-200" />
+      {/* Animated orbs - subtler in light mode */}
+      <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-96 h-48 sm:h-64 md:h-96 bg-primary/5 dark:bg-primary/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/4 right-1/4 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl animate-float animation-delay-200" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
