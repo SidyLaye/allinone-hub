@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { useTheme } from "next-themes";
 import logoDark from "@/assets/logo-dark.svg";
+import logoLight from "@/assets/logo-light.svg";
 
 const footerLinks = {
   product: [
@@ -13,6 +15,8 @@ const footerLinks = {
 };
 
 export function Footer() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <footer className="border-t border-border bg-card/50">
       <div className="container mx-auto px-6 py-12">
@@ -20,7 +24,11 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src={logoDark} alt="AllInOne" className="h-10 w-10" />
+              <img 
+                src={resolvedTheme === "dark" ? logoDark : logoLight} 
+                alt="AllInOne" 
+                className="h-10 w-10" 
+              />
               <span className="text-xl font-bold text-foreground">AllInOne</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
