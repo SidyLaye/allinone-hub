@@ -64,49 +64,49 @@ const solutions = [
 
 export function SolutionsPreview() {
   return (
-    <section className="py-24">
-      <div className="container mx-auto px-6">
+    <section className="py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Powerful <span className="text-gradient">Solutions</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto px-4">
             Discover our growing suite of tools designed to help you work smarter, not harder.
           </p>
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
           {solutions.map((solution, index) => (
             <div
               key={solution.title}
-              className={`group relative glass rounded-2xl p-8 hover-lift animate-fade-in-up`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              className={`group relative glass rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 hover-lift animate-fade-in-up`}
+              style={{ animationDelay: `${index * 50}ms` }}
             >
               {/* Status Badge */}
-              <div className="absolute top-6 right-6">
+              <div className="absolute top-4 right-4 sm:top-6 sm:right-6">
                 {solution.status === "available" ? (
-                  <span className="px-3 py-1 text-xs font-medium bg-primary/20 text-primary rounded-full">
+                  <span className="px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-medium bg-primary/20 text-primary rounded-full">
                     Available
                   </span>
                 ) : (
-                  <span className="px-3 py-1 text-xs font-medium bg-muted text-muted-foreground rounded-full">
-                    Coming Soon
+                  <span className="px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-medium bg-muted text-muted-foreground rounded-full">
+                    Soon
                   </span>
                 )}
               </div>
 
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <solution.icon className="w-7 h-7 text-primary" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/20 transition-colors">
+                <solution.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-primary" />
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold mb-3 text-foreground">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 text-foreground">
                 {solution.title}
               </h3>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6 line-clamp-2">
                 {solution.description}
               </p>
 
@@ -116,16 +116,16 @@ export function SolutionsPreview() {
                   href={solution.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 text-sm text-primary font-medium hover:gap-2 sm:hover:gap-3 transition-all"
                 >
-                  Get Started <ArrowRight className="w-4 h-4" />
+                  Get Started <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </a>
               ) : (
                 <Link
                   to={solution.href}
-                  className="inline-flex items-center gap-2 text-muted-foreground font-medium"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 text-sm text-muted-foreground font-medium"
                 >
-                  Learn More <ArrowRight className="w-4 h-4" />
+                  Learn More <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 </Link>
               )}
             </div>
@@ -133,8 +133,8 @@ export function SolutionsPreview() {
         </div>
 
         {/* View All */}
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" asChild>
+        <div className="text-center mt-8 md:mt-12">
+          <Button variant="outline" size="lg" className="text-sm sm:text-base" asChild>
             <Link to="/solutions">
               View All Solutions
               <ArrowRight className="w-4 h-4" />
