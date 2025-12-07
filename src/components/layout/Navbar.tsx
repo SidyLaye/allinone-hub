@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logoBrand from "@/assets/logo-brand.svg";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -39,7 +40,8 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-2">
+          <ThemeToggle />
           <Button variant="outline" size="sm" asChild>
             <a href="https://knowledge.allinone.ovh/" target="_blank" rel="noopener noreferrer">
               Try Knowledge
@@ -74,11 +76,14 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Button variant="outline" size="sm" className="w-fit" asChild>
-              <a href="https://knowledge.allinone.ovh/" target="_blank" rel="noopener noreferrer">
-                Try Knowledge
-              </a>
-            </Button>
+            <div className="flex items-center gap-2 pt-2">
+              <ThemeToggle />
+              <Button variant="outline" size="sm" className="w-fit" asChild>
+                <a href="https://knowledge.allinone.ovh/" target="_blank" rel="noopener noreferrer">
+                  Try Knowledge
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       )}
