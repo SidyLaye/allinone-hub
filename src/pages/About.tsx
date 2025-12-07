@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Target, Users, Lightbulb, Heart } from "lucide-react";
 import logoDark from "@/assets/logo-dark.svg";
+import SEO from "@/components/SEO";
 
 const values = [
   {
@@ -26,15 +27,36 @@ const values = [
 ];
 
 const About = () => {
+  const aboutStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About AllInOne',
+    description: 'Learn about AllInOne - a unified platform building powerful solutions for teams and individuals.',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'AllInOne',
+      description: 'AllInOne is building a unified platform where powerful solutions come together to help teams and individuals achieve more.',
+      foundingDate: '2024',
+      url: 'https://allinone.ovh',
+    },
+  };
+
   return (
     <Layout>
+      <SEO
+        title="About AllInOne - Our Mission & Values | Unified Platform"
+        description="Learn about AllInOne's mission to unify powerful solutions. We're building an ecosystem where every tool works seamlessly together for teams and individuals."
+        keywords="about AllInOne, company mission, unified platform, team productivity, software solutions"
+        canonicalUrl="/about"
+        structuredData={aboutStructuredData}
+      />
       {/* Hero */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <header className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-8">
-              <img src={logoDark} alt="AllInOne" className="h-20 w-20" />
+              <img src={logoDark} alt="AllInOne Logo" className="h-20 w-20" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               About <span className="text-gradient">AllInOne</span>
@@ -43,7 +65,7 @@ const About = () => {
               We're building a unified platform where powerful solutions come together 
               to help teams and individuals achieve more.
             </p>
-          </div>
+          </header>
         </div>
       </section>
 

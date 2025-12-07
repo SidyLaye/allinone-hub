@@ -5,8 +5,21 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageSquare, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
+  const contactStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact AllInOne',
+    description: 'Get in touch with AllInOne team for questions, feedback, or support.',
+    mainEntity: {
+      '@type': 'Organization',
+      name: 'AllInOne',
+      email: 'contact@allinone.ovh',
+      url: 'https://allinone.ovh',
+    },
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,11 +45,18 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact Us - Get in Touch | AllInOne Platform"
+        description="Have questions about AllInOne? Contact our team for support, feedback, or partnership inquiries. We typically respond within 24 hours."
+        keywords="contact AllInOne, support, feedback, partnership, help"
+        canonicalUrl="/contact"
+        structuredData={contactStructuredData}
+      />
       {/* Hero */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <header className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Get in <span className="text-gradient">Touch</span>
             </h1>
@@ -44,7 +64,7 @@ const Contact = () => {
               Have questions, feedback, or just want to say hello? 
               We'd love to hear from you.
             </p>
-          </div>
+          </header>
         </div>
       </section>
 

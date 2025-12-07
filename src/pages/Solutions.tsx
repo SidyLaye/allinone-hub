@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Cloud, Database, MessageSquare, Rocket, Shield, Zap, BarChart3, Wallet, Calendar, FileText, Users, Globe, Lock, Cpu, Camera, Mail } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const solutions = [
   {
@@ -119,13 +120,37 @@ const solutions = [
 ];
 
 const Solutions = () => {
+  const solutionsStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'AllInOne Solutions',
+    description: '16+ powerful solutions including Knowledge, Automation, Security, and more',
+    itemListElement: solutions.map((solution, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'SoftwareApplication',
+        name: solution.title,
+        description: solution.description,
+        applicationCategory: 'Productivity',
+      },
+    })),
+  };
+
   return (
     <Layout>
+      <SEO
+        title="Our Solutions - 16+ Powerful Tools | AllInOne Platform"
+        description="Explore AllInOne's 16+ solutions: Knowledge base with 300+ articles, Automation, Security, Deploy, Storage, Analytics, Finance, AI Tools, and more. All working seamlessly together."
+        keywords="AllInOne solutions, knowledge management, automation tools, cloud security, deployment, storage, analytics, finance tools, AI productivity"
+        canonicalUrl="/solutions"
+        structuredData={solutionsStructuredData}
+      />
       {/* Hero */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <header className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Our <span className="text-gradient">Solutions</span>
             </h1>
@@ -133,7 +158,7 @@ const Solutions = () => {
               A growing ecosystem of powerful tools designed to work together seamlessly. 
               Start with what you need, expand as you grow.
             </p>
-          </div>
+          </header>
         </div>
       </section>
 
