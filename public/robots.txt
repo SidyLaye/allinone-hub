@@ -1,14 +1,29 @@
+# robots.txt for AllInOne
+# https://allinone.ovh
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://allinone.ovh/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Google specific
 User-agent: Googlebot
 Allow: /
 
+# Bing specific
 User-agent: Bingbot
 Allow: /
 
+# Social media bots
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
 Allow: /
