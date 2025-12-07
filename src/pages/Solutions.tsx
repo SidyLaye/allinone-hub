@@ -6,10 +6,10 @@ const solutions = [
   {
     icon: BookOpen,
     title: "Knowledge",
-    description: "Centralized knowledge base for your team. Organize, search, and share information effortlessly with powerful search and collaboration features.",
+    description: "Discover everything, learn anything. Your ultimate knowledge platform with 300+ articles covering tech, science, health, history, recipes, and more — all beautifully organized.",
     status: "available" as const,
     href: "https://knowledge.allinone.ovh/",
-    features: ["Smart Search", "Team Collaboration", "Rich Editor", "API Access"],
+    features: ["300+ Articles", "12 Categories", "Daily Updates", "Smart Search"],
   },
   {
     icon: Zap,

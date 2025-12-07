@@ -6,7 +6,7 @@ const solutions = [
   {
     icon: BookOpen,
     title: "Knowledge",
-    description: "Centralized knowledge base for your team. Organize, search, and share information effortlessly.",
+    description: "Discover everything, learn anything. 300+ articles on tech, science, health, history, recipes, and more.",
     status: "available" as const,
     href: "https://knowledge.allinone.ovh/",
     external: true,
