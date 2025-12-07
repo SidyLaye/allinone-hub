@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTheme } from "next-themes";
 import logoDark from "@/assets/logo-dark.svg";
+import logoLight from "@/assets/logo-light.svg";
 
 export function Hero() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <section className="relative min-h-[80vh] sm:min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden py-12 sm:py-16 md:py-0">
       {/* Background gradient */}
@@ -19,7 +23,7 @@ export function Hero() {
           <div className="flex justify-center mb-6 sm:mb-8 animate-fade-in-up">
             <div className="relative">
               <img 
-                src={logoDark} 
+                src={resolvedTheme === "dark" ? logoDark : logoLight} 
                 alt="AllInOne" 
                 className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 animate-pulse-glow rounded-full"
               />

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <!-- Outer hexagon border -->
+  <polygon 
+    points="50,2 93,25 93,75 50,98 7,75 7,25" 
+    fill="none" 
+    stroke="#7C3AED" 
+    stroke-width="3"
+    opacity="0.3"
+  />
+  
+  <defs>
+    <linearGradient id="hexGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Inner filled hexagon -->
+  <polygon 
+    points="50,10 85,28 85,72 50,90 15,72 15,28" 
+    fill="url(#hexGradientLight)"
+  />
+  
+  <!-- Inner cut hexagon (light background) -->
+  <polygon 
+    points="50,16 78,32 78,68 50,84 22,68 22,32" 
+    fill="#FFFFFF"
+  />
+  
+  <!-- 99% arc -->
+  <circle
+    cx="50"
+    cy="50"
+    r="12"
+    fill="none"
+    stroke="#7C3AED"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-dasharray="75.4"
+    stroke-dashoffset="0.75"
+    transform="rotate(-90 50 50)"
+  />
+  
+  <!-- Center dot -->
+  <circle cx="50" cy="50" r="3" fill="#7C3AED" opacity="0.6" />
+  
+  <!-- Accent dots -->
+  <circle cx="50" cy="5" r="2" fill="#7C3AED" opacity="0.6" />
+  <circle cx="50" cy="95" r="2" fill="#7C3AED" opacity="0.6" />
+</svg>
