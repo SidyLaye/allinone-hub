@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Cloud, Database, MessageSquare, Rocket, Shield, Zap } from "lucide-react";
+import { ArrowRight, BookOpen, Cloud, Database, MessageSquare, Rocket, Shield, Zap, BarChart3, Wallet, Calendar, FileText, Users, Globe, Lock, Cpu, Camera, Mail } from "lucide-react";
 
 const solutions = [
   {
@@ -45,6 +45,76 @@ const solutions = [
     description: "Real-time communication tools for your team. Chat, video, and collaboration all in one place.",
     status: "coming" as const,
     features: ["Team Chat", "Video Calls", "Screen Sharing", "File Sharing"],
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics",
+    description: "Powerful insights and data visualization. Track metrics, generate reports, and make data-driven decisions.",
+    status: "coming" as const,
+    features: ["Real-time Dashboards", "Custom Reports", "Data Export", "Team Insights"],
+  },
+  {
+    icon: Wallet,
+    title: "Finance",
+    description: "Personal and business finance management. Track expenses, manage budgets, and plan for the future.",
+    status: "coming" as const,
+    features: ["Expense Tracking", "Budget Planning", "Invoice Management", "Financial Reports"],
+  },
+  {
+    icon: Calendar,
+    title: "Schedule",
+    description: "Smart scheduling and time management. Coordinate meetings, set reminders, and stay organized.",
+    status: "coming" as const,
+    features: ["Smart Calendar", "Meeting Scheduler", "Time Tracking", "Reminders"],
+  },
+  {
+    icon: FileText,
+    title: "Docs",
+    description: "Collaborative document creation and management. Write, edit, and share documents with your team.",
+    status: "coming" as const,
+    features: ["Rich Editor", "Real-time Collab", "Templates", "Version History"],
+  },
+  {
+    icon: Users,
+    title: "Teams",
+    description: "Team management and collaboration platform. Organize projects, assign tasks, and track progress.",
+    status: "coming" as const,
+    features: ["Project Boards", "Task Management", "Team Roles", "Activity Feed"],
+  },
+  {
+    icon: Globe,
+    title: "Translate",
+    description: "AI-powered translation and localization. Break language barriers with accurate, context-aware translations.",
+    status: "coming" as const,
+    features: ["100+ Languages", "AI Translation", "Document Translation", "API Access"],
+  },
+  {
+    icon: Lock,
+    title: "Vault",
+    description: "Secure password and credentials management. Store, share, and manage sensitive information safely.",
+    status: "coming" as const,
+    features: ["Encrypted Storage", "Password Generator", "Secure Sharing", "2FA Support"],
+  },
+  {
+    icon: Cpu,
+    title: "AI Tools",
+    description: "Suite of AI-powered productivity tools. Generate content, analyze data, and automate creative tasks.",
+    status: "coming" as const,
+    features: ["Text Generation", "Image Creation", "Code Assistant", "Data Analysis"],
+  },
+  {
+    icon: Camera,
+    title: "Media",
+    description: "Photo and video management platform. Store, organize, edit, and share your media collection.",
+    status: "coming" as const,
+    features: ["Cloud Storage", "Auto Organization", "Basic Editing", "Easy Sharing"],
+  },
+  {
+    icon: Mail,
+    title: "Mail",
+    description: "Professional email hosting and management. Custom domains, powerful filters, and seamless integration.",
+    status: "coming" as const,
+    features: ["Custom Domains", "Smart Filters", "Calendar Sync", "Mobile Apps"],
   },
 ];
 

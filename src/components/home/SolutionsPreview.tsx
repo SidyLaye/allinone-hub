@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Rocket, Shield, Zap } from "lucide-react";
+import { ArrowRight, BookOpen, Rocket, Shield, Zap, BarChart3, Wallet, Calendar, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const solutions = [
@@ -21,14 +21,42 @@ const solutions = [
   {
     icon: Shield,
     title: "Secure",
-    description: "Enterprise-grade security solutions to protect your data and infrastructure.",
+    description: "Enterprise-grade security solutions to protect your data.",
+    status: "coming" as const,
+    href: "/solutions",
+  },
+  {
+    icon: Cpu,
+    title: "AI Tools",
+    description: "AI-powered productivity tools for content generation and analysis.",
+    status: "coming" as const,
+    href: "/solutions",
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics",
+    description: "Powerful insights and data visualization for smart decisions.",
+    status: "coming" as const,
+    href: "/solutions",
+  },
+  {
+    icon: Wallet,
+    title: "Finance",
+    description: "Personal and business finance management made simple.",
+    status: "coming" as const,
+    href: "/solutions",
+  },
+  {
+    icon: Calendar,
+    title: "Schedule",
+    description: "Smart scheduling and time management for busy teams.",
     status: "coming" as const,
     href: "/solutions",
   },
   {
     icon: Rocket,
     title: "Deploy",
-    description: "One-click deployment solutions for your applications and services.",
+    description: "One-click deployment solutions for your applications.",
     status: "coming" as const,
     href: "/solutions",
   },
