@@ -2,7 +2,9 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logoBrand from "@/assets/logo-brand.svg";
+import { useTheme } from "next-themes";
+import logoBrandDark from "@/assets/logo-brand.svg";
+import logoBrandLight from "@/assets/logo-brand-light.svg";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
@@ -15,12 +17,17 @@ const navLinks = [
 export function Navbar() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass">
       <nav className="container mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <img src={logoBrand} alt="AllInOne" className="h-10" />
+          <img 
+            src={resolvedTheme === "dark" ? logoBrandDark : logoBrandLight} 
+            alt="AllInOne" 
+            className="h-10" 
+          />
         </Link>
 
         {/* Desktop Navigation */}
