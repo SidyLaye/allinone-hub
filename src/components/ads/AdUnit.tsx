@@ -33,7 +33,7 @@ const AdUnit = ({ slot, format = 'auto', responsive = true, className = '' }: Ad
       ref={adRef}
       className={`adsbygoogle block ${className}`}
       style={{ display: 'block' }}
-      data-ad-client="ca-pub-9129823514253382"
+      data-ad-client="ca-pub-3121981324994562"
       data-ad-slot={slot}
       data-ad-format={format}
       data-full-width-responsive={responsive ? 'true' : 'false'}
