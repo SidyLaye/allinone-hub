@@ -44,7 +44,7 @@ export function Footer() {
               {footerLinks.product.map((link) => (
                 <li key={link.label}>
                   {link.external ? (
-                    
+                    <a
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
