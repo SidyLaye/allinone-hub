@@ -72,7 +72,7 @@ export function Footer() {
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   {link.external ? (
-                    
+                    <a
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
