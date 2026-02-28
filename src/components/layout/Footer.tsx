@@ -12,6 +12,7 @@ const footerLinks = {
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
     { label: "Privacy Policy", href: "https://privacy.allinone.ovh/", external: true },
+    { label: "Terms of Use", href: "https://tos.allinone.ovh/", external: true },
   ],
 };
 
